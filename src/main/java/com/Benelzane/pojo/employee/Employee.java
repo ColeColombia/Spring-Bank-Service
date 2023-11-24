@@ -106,6 +106,21 @@ public class Employee {
             this.phone = phone;
             return this;
         }
+
+        public Employee buildEmployee(){
+            Employee employee = new Employee();
+            employee.empId = this.empId;
+            employee.branchId = this.branchId;
+            employee.name = this.name;
+            employee.surname = this.surname;
+            employee.dateOfBirth = this.dateOfBirth;
+            employee.idNumber = this.idNumber;
+            employee.gender = this.gender;
+            employee.email = this.email;
+            employee.phone = this.phone;
+            return employee;
+        }
+
     }//end of branch builder class
 
     @Override

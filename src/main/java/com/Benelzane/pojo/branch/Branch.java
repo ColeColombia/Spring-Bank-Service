@@ -29,6 +29,13 @@ public class Branch {
             this.name = name;
             return this;
         }
+
+        public Branch buildBranch(){
+            Branch branch = new Branch();
+            branch.branchId = this.branchId;
+            branch.name = this.name;
+            return branch;
+        }
     }//end of branch builder class
 
     @Override
@@ -51,4 +58,6 @@ public class Branch {
     public int hashCode() {
         return Objects.hash(branchId, name);
     }
+
+
 }//end of branch class
