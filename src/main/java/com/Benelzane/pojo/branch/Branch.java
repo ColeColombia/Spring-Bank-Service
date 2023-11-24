@@ -3,11 +3,11 @@ package com.Benelzane.pojo.branch;
 import java.util.Objects;
 
 public class Branch {
-    private int id;
+    private String branchId;
     private String name;
 
-    public int getId(){
-        return this.id;
+    public String getId(){
+        return this.branchId;
     }
 
     public String getName(){
@@ -17,11 +17,11 @@ public class Branch {
     protected Branch(){}
 
     public static class BranchBuilder{
-        private int id;
+        private String branchId;
         private String name;
 
-        public BranchBuilder buildId(int id){
-            this.id = id;
+        public BranchBuilder buildId(String branchId){
+            this.branchId = branchId;
             return this;
         }//end of buildId method
 
@@ -34,7 +34,7 @@ public class Branch {
     @Override
     public String toString(){
         return "Branch{" +
-                "branch Id='" + id + '\'' +
+                "branch Id='" + branchId + '\'' +
                 ", Branch name='" + name + '\'' +
                 '}';
     }
@@ -44,6 +44,11 @@ public class Branch {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Branch that = (Branch) o;
-        return Objects.equals(id, that.id) && Objects.equals(name, that.name);
+        return Objects.equals(branchId, that.branchId) && Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(branchId, name);
     }
 }//end of branch class
