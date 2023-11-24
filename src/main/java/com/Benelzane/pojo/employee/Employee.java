@@ -14,6 +14,7 @@ public class Employee {
     private long phone;
 
     protected Employee(){}
+
     public String getEmpId() {
         return empId;
     }

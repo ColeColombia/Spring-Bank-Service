@@ -6,15 +6,15 @@ public class Branch {
     private String branchId;
     private String name;
 
-    public String getId(){
-        return this.branchId;
-    }
-
-    public String getName(){
-        return this.name;
-    }
-
     protected Branch(){}
+
+    public String getBranchId() {
+        return branchId;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public static class BranchBuilder{
         private String branchId;
